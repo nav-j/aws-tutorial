@@ -12,6 +12,8 @@ git clone https://user:token@github.com/repo-url.git
 4. Copy Website files to `/var/www/html` and set required permissions.
 ```bash
 cp -r wise-website/cyber-sec-project/* /var/www/html/
+chown -R root.apache /var/www/html
+restorecon -rvf /var/www/html
 ```
 5. Start and enable **httpd** service
 ```bash
